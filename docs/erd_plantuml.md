@@ -4,14 +4,10 @@
     AppInstance ||--o{ Deployment : ""
     AppInstance ||--o{ Resource : ""
     AppInstance ||--o{ Secret : ""
-    class Application {
-       urls Documentation
-       url Api
-    }
-    Application ||--o{ AppConfig : ""
-    Application ||--o{ AppInstance : ""
-    Application ||--o{ AppVersion : ""
-    Application ||--o{ ChartVersion : ""
+    App ||--o{ AppConfig : ""
+    App ||--o{ AppInstance : ""
+    App ||--o{ AppVersion : ""
+    App ||--o{ ChartVersion : ""
     Artifact ||--o{ Deployment : ""
     ChartVersion ||--o{ AppInstance : ""
     ChartVersion ||--o{ AppVersion : ""
