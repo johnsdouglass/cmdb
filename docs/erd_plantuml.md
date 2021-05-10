@@ -1,9 +1,10 @@
 ```plantuml
 @startuml
     AppCollection ||--o{ ChartVersion : ""
+    AppCollection ||--o{ AppCollection : ""
+    AppCollection ||--o{ AppInstance : ""
     AppInstance ||--o{ Deployment : ""
     AppInstance ||--o{ Resource : ""
-    AppInstance ||--o{ Secret : ""
     App ||--o{ AppConfig : ""
     App ||--o{ AppInstance : ""
     App ||--o{ AppVersion : ""
@@ -25,6 +26,5 @@
     Lifecycle ||--o| Lifecycle : ""
     Network ||--o{ KubeCluster : ""
     Region ||--o{ Network : ""
-    Vault ||--o{ Secret : ""
 @enduml
 ```

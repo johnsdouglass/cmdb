@@ -1,13 +1,10 @@
 ```mermaid
 erDiagram
     AppCollection ||--o{ ChartVersion : ""
+    AppCollection ||--o{ AppCollection : ""
+    AppCollection ||--o{ AppInstance : ""
     AppInstance ||--o{ Deployment : ""
     AppInstance ||--o{ Resource : ""
-    AppInstance ||--o{ Secret : ""
-    class App {
-       urls Documentation
-       url Api
-    }
     App ||--o{ AppConfig : ""
     App ||--o{ AppInstance : ""
     App ||--o{ AppVersion : ""
@@ -29,5 +26,4 @@ erDiagram
     Lifecycle ||--o| Lifecycle : ""
     Network ||--o{ KubeCluster : ""
     Region ||--o{ Network : ""
-    Vault ||--o{ Secret : ""
 ```
