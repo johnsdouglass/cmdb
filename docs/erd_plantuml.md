@@ -1,5 +1,7 @@
 ```plantuml
 @startuml
+    hide circle
+    hide members
     AppCollection ||--o{ ChartVersion : ""
     AppCollection ||--o{ AppCollection : ""
     AppCollection ||--o{ AppInstance : ""
